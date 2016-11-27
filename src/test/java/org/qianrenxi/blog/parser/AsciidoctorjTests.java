@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 import org.asciidoctor.Asciidoctor;
+import org.asciidoctor.Options;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,11 +24,13 @@ public class AsciidoctorjTests {
 
 	@Test
 	public void convertFile() {
-		String html = asciidoctor.convertFile(new File("simple.adoc"), new HashMap<String, Object>());
+		Options options = new Options();
+		options.setToFile(false);
+		String html = asciidoctor.convertFile(new File("src/test/resources/adocs/README.adoc"), options);
 		System.out.println(html);
 	}
 
-	@Test
+	//@Test
 	public void convertFiles() {
 		String[] result = asciidoctor.convertFiles(Arrays.asList(new File("simple.adoc")),
 				new HashMap<String, Object>());

@@ -39,6 +39,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('javax.servlet:jstl')
 	compile('org.asciidoctor:asciidoctorj:1.5.4')
+	compile('org.apache.commons:commons-lang3:3.5')
 	runtime('com.h2database:h2')
 	runtime('mysql:mysql-connector-java')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
