@@ -12,4 +12,9 @@ public class DefaultAdminController {
 		
 		return "admin/index";
 	}
+	
+	@RequestMapping("/main")
+	public String main(){
+		return "admin/main";
+	}
 }

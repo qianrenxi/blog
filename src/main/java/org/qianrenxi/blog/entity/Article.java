@@ -29,7 +29,7 @@ public class Article implements Serializable {
 	private Long id;
 	private String title;
 	private String alias;
-	@ManyToMany(cascade=CascadeType.PERSIST)
+	@ManyToMany(cascade={CascadeType.PERSIST, CascadeType.MERGE})
 	private List<Author> authors;
 	@ElementCollection
 	private Set<String> tags;

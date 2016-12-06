@@ -1,0 +1,17 @@
+.span-8 {
+	display: block;
+	height: 8px;
+}
+
+.hide{
+	display: none !important;
+}
+
+.table-before {
+	min-height: 40px;
+}
+
+.table-after,
+.table + .table-after {
+	min-height: 40px;
+}

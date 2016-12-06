@@ -54,4 +54,8 @@ public class Author implements Serializable {
 		this.homePage = homePage;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("[%d]%s<%s>",this.id, this.name, this.email);
+	}
 }
