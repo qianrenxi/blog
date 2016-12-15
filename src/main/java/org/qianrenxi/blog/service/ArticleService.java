@@ -18,7 +18,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -60,6 +63,10 @@ public class ArticleService {
 		for (Long id : ids) {
 			delete(id);
 		}
+	}
+	
+	public Page<Article> getLatestArticles(Pageable pageable){
+		return articleRepository.findAll(pageable);
 	}
 	
 	protected void parseContent(Article article){

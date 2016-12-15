@@ -8,11 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Blog of Qian Renxi</h1>
-<hr>
-<a href="${ctx }/admin">管理</a>
-<a href="${ctx }/article/list">文章</a>
-<hr>
+	<jsp:include page="../include/header.jsp"></jsp:include>
 <article>
 <h1>${article.title }</h1>
 ${article.content }

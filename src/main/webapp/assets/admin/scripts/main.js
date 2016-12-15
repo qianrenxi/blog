@@ -219,7 +219,7 @@ $(document).ready(function($){
 		} else {
 			e.preventDefault();
 			var target = $(e.currentTarget);
-			setUpUrl(target.attr('href'));
+			loadPage(target.attr('href'));
 		}
 	});
 	
